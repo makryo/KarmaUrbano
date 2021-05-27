@@ -19,6 +19,6 @@ class userSeeder extends Seeder
         	'password' => bcrypt('Halcon19')
         ])->assignRole('admin');
 
-        //User::factory(9)->create();
+      
     }
 }
