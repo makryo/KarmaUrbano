@@ -25,7 +25,7 @@ $prov = proveedor::all();
                     <h1>Actualizar datos</h1>
                     <div class="container">
                     
-                        <form method="post" action="{{ route('admin.cliente.update', $Edita->id) }}">
+                        <form method="post" action="{{ route('admin.producto.update', $Edita->id) }}">
 
                             @csrf
                             @method('PATCH')
@@ -34,22 +34,33 @@ $prov = proveedor::all();
                             <div class="row">
                                 <div class="col-6">
                                     <div class="input-group mb-3">
-                                        <input type="text" name="nombre" value="{{ $Edita->nombre }}" class="form-control">
+                                        <input type="text" name="nombre_prod" value="{{ $Edita->nombre_prod }}" class="form-control">
                                         <a class="btn btn-info" href="#" data-toggle="popover" title="Informacion" data-content="Ingrese su nombre, no se permite dejar en blanco ni tampoco escribir caracteres incorrectos">?</a>
                                     </div>
 
-                                        @error('nombre')
+                                        @error('nombre_prod')
                                             <small class="text-warning">No se puede dejar en blanco o los datos son erroneos.</small>
                                         @enderror
                                     <br>
                                     <br>
 
                                     <div class="input-group mb-3">
-                                        <input type="number" name="nit" value="{{ $Edita->nit }}" class="form-control">
+                                        <input type="number" name="stock" value="{{ $Edita->stock }}" class="form-control">
                                         <a class="btn btn-info" href="#" data-toggle="popover" title="Informacion" data-content="Ingrese su numero de nit, solo se permite numeros.">?</a>
                                     </div>
 
-                                        @error('nit')
+                                        @error('stock')
+                                            <small class="text-warning">No se puede dejar en blanco o los datos son erroneos.</small>
+                                        @enderror
+                                    <br>
+                                    <br>
+
+                                    <div class="input-group mb-3">
+                                        <input type="text" name="sucursal" value="{{ $Edita->sucursal }}" class="form-control">
+                                        <a class="btn btn-info" href="#" data-toggle="popover" title="Informacion" data-content="Ingrese su numero de nit, solo se permite numeros.">?</a>
+                                    </div>
+
+                                        @error('sucursal')
                                             <small class="text-warning">No se puede dejar en blanco o los datos son erroneos.</small>
                                         @enderror
                                     <br>
@@ -57,29 +68,36 @@ $prov = proveedor::all();
                                 </div>
 
                                 <div class="col-6">
-                                    <select name="ciclos_ins" class="input-group mb-3 form-control" required>
-                                        @foreach($ciclos as $Lista)
-                                            <option value="{{ $Lista->id }}">
-                                                {{ $Lista->ciclo }}
-                                            </option>
-                                        @endforeach
-                                    </select>
-                                    <br>
+                                    <div class="input-group mb-3">
+                                        <select name="tipo_producto_id" class="input-group mb-3 form-control">
+                                            @foreach($tipo as $Lista)
+                                                <option value="{{ $Lista->id }}">
+                                                    {{ $Lista->nombre }}
+                                                </option>
+                                            @endforeach
 
-                                    <select name="ciclos_ins" class="input-group mb-3 form-control" required>
-                                        @foreach($ciclos as $Lista)
-                                            <option value="{{ $Lista->id }}">
-                                                {{ $Lista->ciclo }}
-                                            </option>
-                                        @endforeach
-                                    </select>
+                                        </select>
+                                        <a class="btn btn-info" href="#" data-toggle="popover" title="Informacion" data-content="Seleccione el tipo de producto, no se permite dejar en blanco">?</a>
+                                        <br>
+                                    </div>
+
+                                    <div class="input-group mb-3">
+                                        <select name="proveedor_id" class="input-group mb-3 form-control">
+                                            @foreach($prov as $Lista)
+                                                <option value="{{ $Lista->id }}">
+                                                    {{ $Lista->nombre_prov }}
+                                                </option>
+                                            @endforeach
+                                        </select>
+                                        <a class="btn btn-info" href="#" data-toggle="popover" title="Informacion" data-content="Seleccione el nombre del proveedor, no se permite dejar en blanco">?</a>
+                                        </div>
                                     <br>
                                     
                                 </div>
                             </div>
                             <input type="submit" value="Guardar" class="btn btn-success">
                             <a href="{{route('admin.inicio')}}" type="button" class="btn btn-secondary">Inicio</a>
-                            <a href="{{ route('admin.cliente.index') }}" type="button" class="btn btn-primary">Tabla de clientes</a>
+                            <a href="{{ route('admin.producto.index') }}" type="button" class="btn btn-primary">Tabla de productos</a>
                         </form>
                     </div>
             </div>

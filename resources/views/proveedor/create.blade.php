@@ -72,7 +72,7 @@
                             </div>
                             <br>
                             <input type="submit" value="Guardar" class="btn btn-success">
-                            <a href="{{route('admin.inicio')}}" type="button" class="btn btn-secondary">Regresar</a>
+                            <a href="{{route('admin.proveedor.index')}}" type="button" class="btn btn-secondary">Regresar</a>
 
                             
                             <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Info</button>

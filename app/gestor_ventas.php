@@ -11,10 +11,11 @@ class gestor_ventas extends Model
 		'cliente_id',
 		'producto_id',
 		'cantidad',
-		'precio_compra'
+		'precio_compra',
+        'total'
     ];
 
     public function cliente(){
-    	return this->belongsTo('App\cliente');
+    	return $this->belongsTo('App\cliente');
     }
 }

@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Exports\VentasExport;
+use Maatwebsite\Excel\Facades\Excel;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,3 +35,7 @@ Route::resource('/admin/tipoProducto', 'TipoProController')->names('admin.tipoPr
 Route::resource('/admin/gestorCompras', 'GestComprasController')->names('admin.gestorCompras');
 
 Route::resource('/admin/gestorVentas', 'GestVentasController')->names('admin.gestorVentas');
+
+
+
+Route::get('admin/excel', 'ExcelVentasController@export')->name('admin.excel');

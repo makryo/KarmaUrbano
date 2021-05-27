@@ -13,25 +13,27 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <h1>Detalles del cliente</h1>
+                    <h1>Detalles de la compra</h1>
                     
                     <dl>
                     <div class="row">
                         <div class="col-6">
-                            <dt>Nombres</dt><dd>{{ $client->nombre }}</dd>
-                            <dt>Apellidos</dt><dd>{{ $client->nit }}</dd>
+                            <dt>Fecha de compra</dt><dd>{{ $gest->fecha_compra }}</dd>
+                            <dt>id de proveedor</dt><dd>{{ $gest->proveedor_id }}</dd>
+                            <dt>id de producto</dt><dd>{{ $gest->producto_id }}</dd>
                         </div>
 
                         <div class="col-6">
-                            <dt>Direccion</dt><dd>{{ $client->direccion }}</dd>
-                            <dt>dpi</dt><dd>{{ $client->telefono }}</dd>
+                            <dt>Cantidad</dt><dd>{{ $gest->cantidad }}</dd>
+                            <dt>Precio</dt><dd>{{ $gest->precio_compra }}</dd>
+                            <dt>Total</dt><dd>{{ $gest->total }}</dd>
                         </div>
                     </div>
                     </dl>
                     <br>  
                     <a href="{{ route('admin.inicio') }}" type="button" class="btn btn-secondary">Inicio</a>
-                    <a href="{{ route('admin.cliente.index') }}" type="button" class="btn btn-primary">Tabla de clientes</a>
-                    <a href="{{ route('admin.cliente.edit', $client->id) }}" class="btn btn-warning">Editar</a>
+                    <a href="{{ route('admin.gestorCompras.index') }}" type="button" class="btn btn-primary">Tabla de compras</a>
+                    <a href="{{ route('admin.gestorCompras.edit', $gest->id) }}" class="btn btn-warning">Editar</a>
                 </div>
             </div>
         </div>

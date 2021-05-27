@@ -13,7 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <h1>Detalles del cliente</h1>
+                    <h1>Detalles del producto</h1>
                     
                     <dl>
                     <div class="row">
@@ -24,15 +24,15 @@
                         </div>
 
                         <div class="col-6">
-                            <dt>Tipo de producto</dt><dd>{{ $prod->tipo_producto_id }}</dd>
-                            <dt>Proveedor</dt><dd>{{ $prov->nombre_prov }}</dd>
+                            <dt>id Tipo de producto</dt><dd>{{ $prod->tipo_producto_id }}</dd>
+                            <dt>id Proveedor</dt><dd>{{ $prod->proveedor_id }}</dd>
                         </div>
                     </div>
                     </dl>
                     <br>  
                     <a href="{{ route('admin.inicio') }}" type="button" class="btn btn-secondary">Inicio</a>
-                    <a href="{{ route('admin.cliente.index') }}" type="button" class="btn btn-primary">Tabla de clientes</a>
-                    <a href="{{ route('admin.cliente.edit', $prod->id) }}" class="btn btn-warning">Editar</a>
+                    <a href="{{ route('admin.producto.index') }}" type="button" class="btn btn-primary">Tabla de productos</a>
+                    <a href="{{ route('admin.producto.edit', $prod->id) }}" class="btn btn-warning">Editar</a>
                 </div>
             </div>
         </div>

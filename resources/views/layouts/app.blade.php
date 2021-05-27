@@ -78,7 +78,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    KarmaUrbano
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -95,25 +95,25 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link" href="{{ route('login') }}">Iniciar sesión</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">Registrarse</a>
                                 </li>
                             @endif
                         @else
                             <li class="nav-item">
-                            <a class="nav-link" href="{{route('admin.inicio')}}">Link xd</a>
+                            <a class="nav-link" href="{{route('admin.inicio')}}">Inicio</a>
                             </li>
 
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-v" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Dropdown
+                                Publicaciones
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown-v">
                                 <a class="dropdown-item" href="{{route('admin.publicacion.index')}}">index</a>
-                                <a class="dropdown-item" href="{{route('admin.publicacion.create')}}">show</a>
+                                <a class="dropdown-item" href="{{route('admin.publicacion.create')}}">crear</a>
                               
                                 </div>
                             </li>
@@ -126,7 +126,7 @@
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        Cerrar sesión
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -144,5 +144,14 @@
             @yield('content')
         </main>
     </div>
+
+    <footer class="bg-light text-center text-lg-start">
+                    <!-- Copyright -->
+                    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                        © 2021 Copyright:
+                        <a class="text-dark" href="https://www.facebook.com/SoftDragon-100810445404548">SoftDragon</a>
+                    </div>
+                    <!-- Copyright -->
+                </footer>
 </body>
 </html>

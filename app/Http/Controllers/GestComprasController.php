@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\gestor_compras;
 
 class GestComprasController extends Controller
 {
@@ -11,9 +12,14 @@ class GestComprasController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function index()
     {
-        //
+        return view('gestorcompra.index'); 
     }
 
     /**
@@ -23,7 +29,7 @@ class GestComprasController extends Controller
      */
     public function create()
     {
-        //
+        return view('gestorcompra.create');
     }
 
     /**
@@ -34,7 +40,37 @@ class GestComprasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $request->validate(
+            [
+                'fecha_compra' => 'required',
+                'proveedor_id' => 'required',
+                'producto_id' => 'required',
+                'cantidad' => 'required',
+                'precio_compra' => 'required',
+                'total' => 'required'
+            ]
+        );
+
+        $fech = $request->input('fecha_compra');
+        $prov = $request->input('proveedor_id');
+        $prod = $request->input('producto_id');
+        $cant = $request->input('cantidad');
+        $precio = $request->input('precio_compra');
+        $total = $request->input('total');
+        
+
+
+        gestor_compras::create([
+            'fecha_compra' => $fech,
+            'proveedor_id' => $prov,
+            'producto_id' => $prod,
+            'cantidad' => $cant,
+            'precio_compra' => $precio,
+            'total' => $total
+        ]);
+
+        return redirect()->route('admin.gestorCompras.index');
     }
 
     /**
@@ -45,7 +81,8 @@ class GestComprasController extends Controller
      */
     public function show($id)
     {
-        //
+        $gest = gestor_compras::find($id);
+        return view('gestorcompra.show', compact('gest'));
     }
 
     /**
@@ -56,7 +93,8 @@ class GestComprasController extends Controller
      */
     public function edit($id)
     {
-        //
+        $Edita = gestor_compras::findOrFail($id);
+        return view('gestorcompra.edit', compact('Edita'));
     }
 
     /**
@@ -68,7 +106,38 @@ class GestComprasController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $gestorc = gestor_compras::find($id);
+
+        $request->validate(
+            [
+                'fecha_compra' => 'required',
+                'proveedor_id' => 'required',
+                'producto_id' => 'required',
+                'cantidad' => 'required',
+                'precio_compra' => 'required',
+                'total' => 'required'
+            ]
+        );
+
+        $fech = $request->input('fecha_compra');
+        $prov = $request->input('proveedor_id');
+        $prod = $request->input('producto_id');
+        $cant = $request->input('cantidad');
+        $precio = $request->input('precio_compra');
+        $total = $request->input('total');
+        
+
+
+        $gestorc -> update([
+            'fecha_compra' => $fech,
+            'proveedor_id' => $prov,
+            'producto_id' => $prod,
+            'cantidad' => $cant,
+            'precio_compra' => $precio,
+            'total' => $total
+        ]);
+
+        return redirect()->route('admin.gestorCompras.index');
     }
 
     /**
@@ -79,6 +148,6 @@ class GestComprasController extends Controller
      */
     public function destroy($id)
     {
-        //
+
     }
 }

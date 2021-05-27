@@ -11,6 +11,8 @@ class gestor_compras extends Model
 		'proveedor_id',
 		'producto_id',
 		'cantidad',
-		'precio_compra'
+		'precio_compra',
+		'total'
     ];
 }
+ 

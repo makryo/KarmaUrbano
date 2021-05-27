@@ -1,6 +1,9 @@
 <?php  
-use App\cliente;
-$datos = cliente::all();
+$datos = DB::select('select gestor_ventas.id, fecha_venta, clientes.nombre, productos.nombre_prod, cantidad, 
+precio_compra, total 
+from gestor_ventas, clientes, productos
+where gestor_ventas.cliente_id = clientes.id
+and gestor_ventas.producto_id = productos.id');
 ?>
 
 @extends('layouts.app')
@@ -11,7 +14,7 @@ $datos = cliente::all();
     <div class="row justify-content-center">
         <div class="col-md-13">
             <div class="card">
-                <div class="card-header">Gestion de clientes</div>
+                <div class="card-header">Gestion de Ventas</div>
                     
                 <div class="card-body">
                     @if (session('status'))
@@ -19,7 +22,7 @@ $datos = cliente::all();
                             {{ session('status') }}
                         </div>
                     @endif
-                    <h1>Clientes ingresados</h1>
+                    <h1>Ventas realizadas</h1>
                     <br>
                     <script language="JavaScript">
                         $(document).ready(function() {
@@ -31,29 +34,28 @@ $datos = cliente::all();
                     <table class="table table-striped table-bordered" id="datos">
                         <thead>
                         <tr>
-                            <th>Nombre</th>
-                            <th>Numero de Nit</th>
-                            <th>Direccion</th>
-                            <th>Numero de Telefono</th>
+                            <th>Fecha de venta</th>
+                            <th>Cliente</th>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                            <th>Precio</th>
+                            <th>Total</th>
                             <th>detalles</th>
                         </tr>
                         </thead>
 
                         @foreach($datos as $Lista)
                             <tr>
+                                <td>{{ $Lista->fecha_venta }}</td>
                                 <td>{{ $Lista->nombre }}</td>
-                                <td>{{ $Lista->nit }}</td>
-                                <td>{{ $Lista->direccion }}</td>
-                                <td>{{ $Lista->telefono }}</td>
+                                <td>{{ $Lista->nombre_prod }}</td>
+                                <td>{{ $Lista->cantidad }}</td>
+                                <td>{{ $Lista->precio_compra }}</td>
+                                <td>{{ $Lista->total }}</td>
                                 <td>
-                                    <a href="{{ route('admin.cliente.show', $Lista->id) }}" class="btn btn-success">Detalles</a>    
+                                    <a href="{{ route('admin.gestorVentas.show', $Lista->id) }}" class="btn btn-success">Detalles</a>    
                                     <br>
                                     <br>
-                                    <form method="post" action="{{ route('admin.cliente.destroy', $Lista->id) }}">
-                                        @csrf
-                                        @method('DELETE')
-                                        <input type="submit" value="Borrar" class="btn btn-danger">
-                                    </form>
                                 </td>
                                 
                             </tr>
@@ -67,7 +69,7 @@ $datos = cliente::all();
                     
                     <br>  
                     <a href="{{route('admin.inicio')}}" type="button" class="btn btn-danger">Regresar</a>
-                    <a href="{{route('admin.cliente.create')}}" type="button" class="btn btn-success">Nuevo Cliente</a>
+                    <a href="{{route('admin.gestorVentas.create')}}" type="button" class="btn btn-success">Nueva Venta</a>
                     
                     
                 </div>

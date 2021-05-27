@@ -13,7 +13,7 @@ and productos.tipo_producto_id = tipo_productos.id');
     <div class="row justify-content-center">
         <div class="col-md-13">
             <div class="card">
-                <div class="card-header">Gestion de clientes</div>
+                <div class="card-header">Gestion de productos</div>
                     
                 <div class="card-body">
                     @if (session('status'))
@@ -21,7 +21,7 @@ and productos.tipo_producto_id = tipo_productos.id');
                             {{ session('status') }}
                         </div>
                     @endif
-                    <h1>Clientes ingresados</h1>
+                    <h1>Productos ingresados</h1>
                     <br>
                     <script language="JavaScript">
                         $(document).ready(function() {
