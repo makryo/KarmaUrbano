@@ -2,15 +2,14 @@
 
 namespace App\Exports;
 
-use App\gestor_ventas;
+use App\gestor_compras;
 use DB;
 use Illuminate\Support\Collection;
 use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\FromQuery;
 use Maatwebsite\Excel\Concerns\WithHeadings;
 
-
-class VentasExport implements FromCollection
+class CompraExport implements FromCollection
 {
     /**
     * @return \Illuminate\Support\Collection
@@ -18,11 +17,11 @@ class VentasExport implements FromCollection
     public function headings(): array
     {
         return [
-            'fecha_venta',
+            'fecha_compra',
 			'cliente',
 			'producto',
 			'cantidad',
-			'precio_venta',
+			'precio_compra',
 	        'total'
         ];
     }
@@ -30,13 +29,13 @@ class VentasExport implements FromCollection
 
     public function collection()
     {
-    	$ventas = DB::table('gestor_ventas')
-    	->join('clientes', 'gestor_ventas.id', '=', 'clientes.id')
-    	->join('productos', 'gestor_ventas.id', '=', 'productos.id')
-    	->select('fecha_venta','clientes.nombre', 'productos.nombre_prod',
-		'cantidad', 'precio_venta', 'total')->get();
+    	$compras = DB::table('gestor_compras')
+    	->join('proveedors', 'gestor_compras.id', '=', 'proveedors.id')
+    	->join('productos', 'gestor_compras.id', '=', 'productos.id')
+    	->select('fecha_compra','proveedors.nombre_prov', 'productos.nombre_prod',
+		'cantidad', 'precio_compra', 'total')->get();
 
-         return $ventas;
+         return $compras;
         
     }
 }

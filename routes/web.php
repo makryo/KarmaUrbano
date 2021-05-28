@@ -39,3 +39,5 @@ Route::resource('/admin/gestorVentas', 'GestVentasController')->names('admin.ges
 
 
 Route::get('admin/excel', 'ExcelVentasController@export')->name('admin.excel');
+
+Route::get('admin/excel/compra', 'ExcelComprasController@export')->name('admin.excel.compra');

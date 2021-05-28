@@ -59,10 +59,10 @@
 
                         <div class="col-6">
                             <div class="card text-white bg-primary mb-3" style="max-width: 20rem;" wfd-id="98">
-                              <div class="card-header" wfd-id="100">Header</div>
+                              <div class="card-header" wfd-id="100">Nuevo registro</div>
                               <div class="card-body" wfd-id="99">
-                                <h4 class="card-title">Primary card title</h4>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <h4 class="card-title">Nuevo cliente</h4>
+                                <p class="card-text">Formulario para registrar nuevos clientes.</p>
                                 <a href="{{route('admin.cliente.create')}}" class="btn btn-secondary">crear cliente</a>
                               </div>
                             </div>
@@ -78,27 +78,26 @@
                     <div class="row">
                         <div class="col-6">
                             <div class="card text-white bg-success mb-3" style="max-width: 20rem;" wfd-id="98">
-                              <div class="card-header" wfd-id="100">Header</div>
+                              <div class="card-header" wfd-id="100">Tablas</div>
                               <div class="card-body" wfd-id="99">
-                                <h4 class="card-title">Primary card title</h4>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="{{route('admin.cliente.index')}}" class="btn btn-secondary">tabla de clientes</a>
+                                <h4 class="card-title">datos registrados</h4>
+                                <p class="card-text">Tabla de registros de los proveedores, contiene todos los datos de los proveedores del establecimiento.</p>
+                                <a href="{{route('admin.proveedor.index')}}" class="btn btn-secondary">tabla de proveedores</a>
                               </div>
                             </div>
                         </div>
 
                         <div class="col-6">
                             <div class="card text-white bg-success mb-3" style="max-width: 20rem;" wfd-id="98">
-                              <div class="card-header" wfd-id="100">Header</div>
+                              <div class="card-header" wfd-id="100">Nuevo registro</div>
                               <div class="card-body" wfd-id="99">
-                                <h4 class="card-title">Primary card title</h4>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="{{route('admin.cliente.create')}}" class="btn btn-secondary">crear cliente</a>
+                                <h4 class="card-title">Nuevo proveedor</h4>
+                                <p class="card-text">Formulario para registrar nuevos proveedores.</p>
+                                <a href="{{route('admin.proveedor.create')}}" class="btn btn-secondary">crear proveedor</a>
                               </div>
                             </div>
                         </div>
                     </div>
-                    <a href="{{route('admin.proveedor.index')}}">proveedor</a>
                 </div>
 
 
@@ -110,27 +109,26 @@
                     <div class="row">
                         <div class="col-6">
                             <div class="card text-white bg-warning mb-3" style="max-width: 20rem;" wfd-id="98">
-                              <div class="card-header" wfd-id="100">Header</div>
+                              <div class="card-header" wfd-id="100">Tablas</div>
                               <div class="card-body" wfd-id="99">
-                                <h4 class="card-title">Primary card title</h4>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="{{route('admin.cliente.index')}}" class="btn btn-secondary">tabla de clientes</a>
+                                <h4 class="card-title">datos registrados</h4>
+                                <p class="card-text">Tabla de registros de productos que contiene todos los datos de productos del establecimiento.</p>
+                                <a href="{{route('admin.producto.index')}}" class="btn btn-secondary">tabla de productos</a>
                               </div>
                             </div>
                         </div>
 
                         <div class="col-6">
                             <div class="card text-white bg-warning mb-3" style="max-width: 20rem;" wfd-id="98">
-                              <div class="card-header" wfd-id="100">Header</div>
+                              <div class="card-header" wfd-id="100">Nuevo registro</div>
                               <div class="card-body" wfd-id="99">
-                                <h4 class="card-title">Primary card title</h4>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="{{route('admin.cliente.create')}}" class="btn btn-secondary">crear cliente</a>
+                                <h4 class="card-title">Nuevo producto</h4>
+                                <p class="card-text">Formulario para registrar nuevos productos.</p>
+                                <a href="{{route('admin.producto.create')}}" class="btn btn-secondary">crear producto</a>
                               </div>
                             </div>
                         </div>
                     </div>
-                <a href="{{route('admin.producto.index')}}">producto</a>
                 </div>
 
 
@@ -142,27 +140,26 @@
                     <div class="row">
                         <div class="col-6">
                             <div class="card text-white bg-danger mb-3" style="max-width: 20rem;" wfd-id="98">
-                              <div class="card-header" wfd-id="100">Header</div>
+                              <div class="card-header" wfd-id="100">Tablas</div>
                               <div class="card-body" wfd-id="99">
-                                <h4 class="card-title">Primary card title</h4>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="{{route('admin.cliente.index')}}" class="btn btn-secondary">tabla de clientes</a>
+                                <h4 class="card-title">datos registrados</h4>
+                                <p class="card-text">Tabla de registros de compras, contiene todos los datos de las compras del establecimiento.</p>
+                                <a href="{{route('admin.gestorCompras.index')}}" class="btn btn-secondary">tabla de compras</a>
                               </div>
                             </div>
                         </div>
 
                         <div class="col-6">
                             <div class="card text-white bg-danger mb-3" style="max-width: 20rem;" wfd-id="98">
-                              <div class="card-header" wfd-id="100">Header</div>
+                              <div class="card-header" wfd-id="100">Nuevo registro</div>
                               <div class="card-body" wfd-id="99">
-                                <h4 class="card-title">Primary card title</h4>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="{{route('admin.cliente.create')}}" class="btn btn-secondary">crear cliente</a>
+                                <h4 class="card-title">Nueva compra</h4>
+                                <p class="card-text">Formulario para registrar nuevas compras.</p>
+                                <a href="{{route('admin.gestorCompras.create')}}" class="btn btn-secondary">crear compra</a>
                               </div>
                             </div>
                         </div>
                     </div>
-                <a href="{{route('admin.gestorCompras.index')}}">gestorCompras</a>
                 </div>
 
 
@@ -174,27 +171,26 @@
                     <div class="row">
                         <div class="col-6">
                             <div class="card text-white bg-light mb-3" style="max-width: 20rem;" wfd-id="98">
-                              <div class="card-header" wfd-id="100">Header</div>
+                              <div class="card-header" wfd-id="100">Tablas</div>
                               <div class="card-body" wfd-id="99">
-                                <h4 class="card-title">Primary card title</h4>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="{{route('admin.cliente.index')}}" class="btn btn-secondary">tabla de clientes</a>
+                                <h4 class="card-title">datos registrados</h4>
+                                <p class="card-text">Tabla de registros de las ventas, contiene todos los datos de las ventas del establecimiento.</p>
+                                <a href="{{route('admin.gestorVentas.index')}}" class="btn btn-secondary">tabla de ventas</a>
                               </div>
                             </div>
                         </div>
 
                         <div class="col-6">
                             <div class="card text-white bg-light mb-3" style="max-width: 20rem;" wfd-id="98">
-                              <div class="card-header" wfd-id="100">Header</div>
+                              <div class="card-header" wfd-id="100">Nuevo registro</div>
                               <div class="card-body" wfd-id="99">
-                                <h4 class="card-title">Primary card title</h4>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="{{route('admin.cliente.create')}}" class="btn btn-secondary">crear cliente</a>
+                                <h4 class="card-title">Nueva venta</h4>
+                                <p class="card-text">Formulario para registrar nuevas ventas</p>
+                                <a href="{{route('admin.gestorVentas.create')}}" class="btn btn-secondary">crear venta</a>
                               </div>
                             </div>
                         </div>
                     </div>
-                <a href="{{route('admin.gestorVentas.index')}}">gestorVentas</a>
                 </div>
 
 
@@ -206,29 +202,27 @@
                     <div class="row">
                         <div class="col-6">
                             <div class="card text-white bg-dark mb-3" style="max-width: 20rem;" wfd-id="98">
-                              <div class="card-header" wfd-id="100">Header</div>
+                              <div class="card-header" wfd-id="100">Informe de ventas</div>
                               <div class="card-body" wfd-id="99">
-                                <h4 class="card-title">Primary card title</h4>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="{{route('admin.cliente.index')}}" class="btn btn-secondary">tabla de clientes</a>
+                                <h4 class="card-title">Generar informe</h4>
+                                <p class="card-text">Crear un informe en formato excel. Se creara un excel donde estaran los datos ordenados conforme a la tabla de ventas.</p>
+                                <a href="{{route('admin.excel')}}" class="btn btn-secondary">crear informe</a>
                               </div>
                             </div>
                         </div>
 
                         <div class="col-6">
                             <div class="card text-white bg-dark mb-3" style="max-width: 20rem;" wfd-id="98">
-                              <div class="card-header" wfd-id="100">Header</div>
+                              <div class="card-header" wfd-id="100">Informe de compras</div>
                               <div class="card-body" wfd-id="99">
-                                <h4 class="card-title">Primary card title</h4>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="{{route('admin.cliente.create')}}" class="btn btn-secondary">crear cliente</a>
+                                <h4 class="card-title">Generar informe</h4>
+                                <p class="card-text">Crear un informe en formato excel. Se creara un excel donde estaran los datos ordenados conforme a la tabla de compras.</p>
+                                <a href="{{route('admin.excel.compra')}}" class="btn btn-secondary">crear informe</a>
                               </div>
                             </div>
                         </div>
                     </div>
-                <a href="{{route('admin.excel')}}">generar informe venta</a>
                 </div>
-
 
             </div>
             </div>
