@@ -20,6 +20,7 @@
 
 
     <!-- Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://bootswatch.com/5/cyborg/bootstrap.min.css" rel="stylesheet">
 
     
@@ -72,6 +73,26 @@
           $('[data-toggle="popover"]').popover();   
         });
     </script>
+
+    <style type="text/css">
+        .fa {
+          padding: 20px;
+          font-size: 30px;
+          width: 50px;
+          text-align: center;
+          text-decoration: none;
+          margin: 5px 2px;
+        }
+
+        .fa:hover {
+            opacity: 0.7;
+        }
+
+        .fa-facebook {
+          background: #3B5998;
+          color: white;
+        }
+    </style>
 </head>
 <body>
     <div id="app">

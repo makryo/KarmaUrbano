@@ -24,7 +24,7 @@ class CreateGestorVentasTable extends Migration
             $table->foreign('producto_id')->references('id')->on('productos');
 
             $table->string('cantidad');
-            $table->string('precio_compra');
+            $table->string('precio_venta');
             $table->string('total');
             $table->timestamps();
         });

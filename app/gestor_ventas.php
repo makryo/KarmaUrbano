@@ -11,7 +11,7 @@ class gestor_ventas extends Model
 		'cliente_id',
 		'producto_id',
 		'cantidad',
-		'precio_compra',
+		'precio_venta',
         'total'
     ];
 

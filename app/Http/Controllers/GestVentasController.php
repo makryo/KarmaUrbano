@@ -46,7 +46,7 @@ class GestVentasController extends Controller
                 'cliente_id' => 'required',
                 'producto_id' => 'required',
                 'cantidad' => 'required',
-                'precio_compra' => 'required',
+                'precio_venta' => 'required',
                 'total' => 'required'
             ]
         );
@@ -55,7 +55,7 @@ class GestVentasController extends Controller
         $prov = $request->input('cliente_id');
         $prod = $request->input('producto_id');
         $cant = $request->input('cantidad');
-        $precio = $request->input('precio_compra');
+        $precio = $request->input('precio_venta');
         $total = $request->input('total');
         
 
@@ -65,7 +65,7 @@ class GestVentasController extends Controller
             'cliente_id' => $prov,
             'producto_id' => $prod,
             'cantidad' => $cant,
-            'precio_compra' => $precio,
+            'precio_venta' => $precio,
             'total' => $total
         ]);
 
@@ -113,7 +113,7 @@ class GestVentasController extends Controller
                 'cliente_id' => 'required',
                 'producto_id' => 'required',
                 'cantidad' => 'required',
-                'precio_compra' => 'required',
+                'precio_venta' => 'required',
                 'total' => 'required'
             ]
         );
@@ -122,7 +122,7 @@ class GestVentasController extends Controller
         $prov = $request->input('cliente_id');
         $prod = $request->input('producto_id');
         $cant = $request->input('cantidad');
-        $precio = $request->input('precio_compra');
+        $precio = $request->input('precio_venta');
         $total = $request->input('total');
         
 
@@ -132,7 +132,7 @@ class GestVentasController extends Controller
             'cliente_id' => $prov,
             'producto_id' => $prod,
             'cantidad' => $cant,
-            'precio_compra' => $precio,
+            'precio_venta' => $precio,
             'total' => $total
         ]);
 

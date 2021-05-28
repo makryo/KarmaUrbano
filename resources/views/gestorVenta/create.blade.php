@@ -104,10 +104,10 @@ $client = cliente::all();
 
                                     <label>Precio</label>
                                     <div class="input-group mb-3">
-                                        <input type="number" class="form-control" name="precio_compra" step="0.01">
+                                        <input type="number" class="form-control" name="precio_venta" step="0.01">
                                          <a class="btn btn-info" href="#" data-toggle="popover" title="Informacion" data-content="Ingrese el precio del producto a vender, no se permite dejar en blanco ni tampoco escribir caracteres incorrectos">?</a>
                                     </div>
-                                        @error('precio_compra')
+                                        @error('precio_venta')
                                             <small class="text-warning">No se puede dejar en blanco o los datos son erroneos.</small>
                                         @enderror
                                     <br>

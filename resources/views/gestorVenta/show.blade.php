@@ -25,7 +25,7 @@
 
                         <div class="col-6">
                             <dt>Cantidad</dt><dd>{{ $gest->cantidad }}</dd>
-                            <dt>Precio</dt><dd>{{ $gest->precio_compra }}</dd>
+                            <dt>Precio</dt><dd>{{ $gest->precio_venta }}</dd>
                             <dt>Total</dt><dd>{{ $gest->total }}</dd>
                         </div>
                     </div>

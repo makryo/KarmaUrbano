@@ -1,6 +1,6 @@
 <?php  
 $datos = DB::select('select gestor_ventas.id, fecha_venta, clientes.nombre, productos.nombre_prod, cantidad, 
-precio_compra, total 
+precio_venta, total 
 from gestor_ventas, clientes, productos
 where gestor_ventas.cliente_id = clientes.id
 and gestor_ventas.producto_id = productos.id');
@@ -50,7 +50,7 @@ and gestor_ventas.producto_id = productos.id');
                                 <td>{{ $Lista->nombre }}</td>
                                 <td>{{ $Lista->nombre_prod }}</td>
                                 <td>{{ $Lista->cantidad }}</td>
-                                <td>{{ $Lista->precio_compra }}</td>
+                                <td>{{ $Lista->precio_venta }}</td>
                                 <td>{{ $Lista->total }}</td>
                                 <td>
                                     <a href="{{ route('admin.gestorVentas.show', $Lista->id) }}" class="btn btn-success">Detalles</a>    
